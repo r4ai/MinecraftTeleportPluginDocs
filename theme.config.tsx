@@ -8,15 +8,17 @@ const config: DocsThemeConfig = {
     const { frontMatter } = useConfig();
     const url =
       'https://minecraft-teleport-plugin-docs.vercel.app' + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
+    const title = frontMatter.title ? `${frontMatter.title} - Minecraft Teleport Plugin` : 'Minecraft Teleport Plugin';
+    const description = frontMatter.description || 'A Minecraft plugin';
 
     return {
-      title: frontMatter.title || 'MinecraftTeleportPlugin',
-      description: frontMatter.description || 'A Minecraft plugin',
+      title,
+      description,
       url,
       openGraph: {
         url,
-        title: frontMatter.title || 'MinecraftTeleportPlugin',
-        description: frontMatter.description || 'A Minecraft plugin',
+        title,
+        description,
       },
     };
   },
