@@ -6,10 +6,10 @@ interface KbdProps {
 }
 
 export const Kbd: FC<KbdProps> = ({ children }) => {
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   return (
-    <kbd data-theme={theme} className={`kbd kbd-sm ${theme === 'dark' ? 'text-gray-200' : 'text-gray-800'}`}>
+    <kbd data-theme={resolvedTheme} className={`kbd kbd-sm dark:text-gray-200 text-gray-800`}>
       {children}
     </kbd>
   );

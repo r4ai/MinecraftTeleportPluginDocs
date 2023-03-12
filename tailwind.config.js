@@ -4,5 +4,9 @@ module.exports = {
   theme: {
     extend: {},
   },
+  darkMode: 'class',
+  daisyui: {
+    themes: ['light', 'dark'], // cupcake: light theme
+  },
   plugins: [require('daisyui')],
 };
