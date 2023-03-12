@@ -8,7 +8,11 @@ const config: DocsThemeConfig = {
   },
   docsRepositoryBase: 'https://github.com/r4ai/MinecraftTeleportPluginDocs',
   footer: {
-    text: 'Minecraft Teleport Plugin',
+    text: (
+      <span>
+        MIT License &copy; 2023 by <a href="https://github.com/r4ai/MinecraftTeleportPluginDocs">rai</a>
+      </span>
+    ),
   },
 };
 

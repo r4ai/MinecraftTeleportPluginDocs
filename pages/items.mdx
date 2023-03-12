@@ -1,0 +1,95 @@
+import { Kbd } from '../components/Kbd';
+import { Callout } from 'nextra-theme-docs';
+
+# Items
+
+## TeleportBerry
+
+TeleportBerry is a berry that teleports the player when eaten.
+
+### Usage
+
+1. Holding the berry in your hand, <Kbd>shift</Kbd> + <Kbd>left-click</Kbd> to set the teleport location.
+2. Then, eating the berry, you will be teleported to the remembered location.
+
+### Recipe
+
+TODO: Add visual recipe
+
+```json
+{
+  "pattern": [" B ", "BGB", " B "],
+  "key": {
+    "B": {
+      "item": "minecraft:sweet_berries"
+    },
+    "G": {
+      "item": "minecraft:gold_nugget"
+    }
+  }
+}
+```
+
+> Defined in [TeleportBerry.kt](https://github.com/r4ai/MinecraftTeleportPlugin/blob/main/src/main/kotlin/com/github/r4ai/items/TeleportBerry.kt)
+
+## HomeTeleportFeather
+
+HomeTeleportFeather is a feather that teleports the player to the home location when <Kbd>right-click</Kbd>.
+
+### Usage
+
+1. Holding the feather in your hand, <Kbd>right-click</Kbd> to teleport to the home location.  
+   Teleporting to home takes 1 second.
+
+### Recipe
+
+TODO: Add visual recipe
+
+```json
+{
+  "pattern": [" F ", " D ", " F "],
+  "key": {
+    "F": {
+      "item": "minecraft:feather"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  }
+}
+```
+
+> Defined in [HomeTeleportFeather.kt](https://github.com/r4ai/MinecraftTeleportPlugin/blob/main/src/main/kotlin/com/github/r4ai/items/HomeTeleportFeather.kt)
+
+## MagicMoveWand (Experimental)
+
+MagicMoveWand is a wand that pushes the player forward when <Kbd>right-click</Kbd>.
+
+<Callout type="warning">
+  This item is under development and is broken. Also, this item may be removed in the future.
+</Callout>
+
+### Usage
+
+1. Holding the wand in your hand, <Kbd>right-click</Kbd> to go forward.
+
+### Recipe
+
+```json
+{
+  "pattern": [" D ", " G ", " I "],
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  }
+}
+```
+
+> Defined in [MagicMoveWand.kt](https://github.com/r4ai/MinecraftTeleportPlugin/blob/main/src/main/kotlin/com/github/r4ai/items/MagicMoveWand.kt)
