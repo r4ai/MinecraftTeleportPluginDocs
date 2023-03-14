@@ -1,7 +1,7 @@
 {
-  "name": "nextra-docs-template",
+  "name": "minecraft-teleport-plugin-docs",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Docs for Minecraft Teleport Plugin",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/r4ai/MinecraftTeleportPluginDocs.git"
   },
-  "author": "Shu Ding <g@shud.in>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
-  },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "minecraft-teleport-plugin-docs.vercel.app",
   "dependencies": {
     "@heroicons/react": "^2.0.16",
     "daisyui": "^2.51.3",
