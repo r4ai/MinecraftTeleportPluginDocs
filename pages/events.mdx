@@ -1,0 +1,24 @@
+---
+title: Teleport Sign
+description: Teleports using signboards
+---
+
+import { Kbd } from '../components/Kbd';
+import { YouTube } from '../components/YouTube';
+
+# Teleport Signs
+
+This plugin allows you to create signs that teleport players to a location when they <Kbd>right-click</Kbd> on them.
+
+## Usage
+
+1. Place a sign.  
+   The signs are not special, just regular Minecraft signs.
+2. Write `[teleport]` on the second line.
+3. Write the location you want to teleport to on the third line.  
+   The format is `<X>, <Y>, <Z>`. For example, `0, 64, 0`.
+4. Right-click on the sign to teleport.
+
+<YouTube id="yAeWD4ljcZ4" title="How to use teleport sign" />
+
+> Defined in [SignTeleport.kt](https://github.com/r4ai/MinecraftTeleportPlugin/blob/main/src/main/kotlin/com/github/r4ai/events/SignTeleport.kt)
