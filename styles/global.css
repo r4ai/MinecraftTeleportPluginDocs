@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .dimentional-border {
+    @apply border-2 border-l-black border-t-black border-r-white border-b-white
+  }
+}
+
 .yt-lite {
   @apply my-6 max-w-2xl;
   background-color: #000;

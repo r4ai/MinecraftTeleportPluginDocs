@@ -8,8 +8,8 @@ module.exports = {
     'airbnb/hooks',
     'plugin:react/recommended',
     'eslint:recommended',
-    'prettier',
     'plugin:@typescript-eslint/recommended',
+    'prettier',
   ],
   overrides: [
     {
@@ -95,5 +95,12 @@ module.exports = {
         ignoreFunctionalComponents: true,
       },
     ],
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": [
+          "jsx"
+        ]
+      }
   },
 };

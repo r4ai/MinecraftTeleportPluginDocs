@@ -4,7 +4,7 @@ description: Items in Minecraft Teleport Plugin
 ---
 
 import { Callout } from 'nextra-theme-docs';
-import { Kbd, YouTube } from 'components';
+import { Kbd, YouTube, Recipe } from '@/components';
 
 # Items
 
@@ -21,7 +21,17 @@ TeleportBerry is a berry that teleports the player when eaten.
 
 ### Recipe
 
-TODO: Add visual recipe
+<Recipe
+  patterns={[' B ', 'BGB', ' B ']}
+  keys={{
+    B: { item: 'minecraft:sweet_berries' },
+    G: { item: 'minecraft:gold_nugget' },
+  }}
+  result={{
+    name: 'TeleportBerry',
+    item: 'minecraft:sweet_berries',
+  }}
+/>
 
 ```json
 {
@@ -52,21 +62,17 @@ HomeTeleportFeather is a feather that teleports the player to the home location 
 
 ### Recipe
 
-TODO: Add visual recipe
-
-```json
-{
-  "pattern": [" F ", " D ", " F "],
-  "key": {
-    "F": {
-      "item": "minecraft:feather"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    }
-  }
-}
-```
+<Recipe
+  patterns={[' F ', ' D ', ' F ']}
+  keys={{
+    F: { item: 'minecraft:feather' },
+    D: { item: 'minecraft:diamond' },
+  }}
+  result={{
+    name: 'HomeTeleportFeather',
+    item: 'minecraft:feather',
+  }}
+/>
 
 > Defined in [HomeTeleportFeather.kt](https://github.com/r4ai/MinecraftTeleportPlugin/blob/main/src/main/kotlin/com/github/r4ai/items/HomeTeleportFeather.kt)
 
@@ -83,6 +89,19 @@ MagicMoveWand is a wand that pushes the player forward when <Kbd>right-click</Kb
 1. Holding the wand in your hand, <Kbd>right-click</Kbd> to go forward.
 
 ### Recipe
+
+<Recipe
+  patterns={[' D ', ' G ', ' I ']}
+  keys={{
+    D: { item: 'minecraft:diamond' },
+    G: { item: 'minecraft:gold_ingot' },
+    I: { item: 'minecraft:iron_ingot' },
+  }}
+  result={{
+    name: 'MagicMoveWand',
+    item: 'minecraft:stick',
+  }}
+/>
 
 ```json
 {
