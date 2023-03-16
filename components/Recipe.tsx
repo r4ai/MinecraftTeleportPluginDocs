@@ -1,4 +1,3 @@
 import { FC } from 'react';
-import { YouTube } from './YouTube';
 
-export const Recipe: FC = () => <YouTube title="" id="" />;
+export const Recipe: FC = () => <div />;
