@@ -4,8 +4,8 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 interface YouTubeProps {
   id: string;
   title: string;
-  muted: boolean;
-  autoplay: boolean;
+  muted?: boolean;
+  autoplay?: boolean;
 }
 
 export const YouTube: FC<YouTubeProps> = ({ id, title, muted = true, autoplay = true }) => {
@@ -19,6 +19,5 @@ export const YouTube: FC<YouTubeProps> = ({ id, title, muted = true, autoplay = 
     'showinfo=0',
     'rel=0',
   ].join('&');
-  console.log(params);
   return <LiteYouTubeEmbed id={id} title={title} muted={muted} params={params} />;
 };

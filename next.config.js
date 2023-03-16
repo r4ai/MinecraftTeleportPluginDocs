@@ -1,3 +1,4 @@
+// @ts-nocheck
 const withNextra = require('nextra')({
   latex: true,
   theme: 'nextra-theme-docs',

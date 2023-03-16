@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import React from 'react';
 import { DocsThemeConfig, useConfig } from 'nextra-theme-docs';
 import { useRouter } from 'next/router';
@@ -6,8 +8,9 @@ const config: DocsThemeConfig = {
   useNextSeoProps() {
     const { asPath, defaultLocale, locale } = useRouter();
     const { frontMatter } = useConfig();
-    const url =
-      'https://minecraft-teleport-plugin-docs.vercel.app' + (defaultLocale === locale ? asPath : `/${locale}${asPath}`);
+    const url = `https://minecraft-teleport-plugin-docs.vercel.app${
+      defaultLocale === locale ? asPath : `/${locale}${asPath}`
+    }`;
     const title = frontMatter.title ? `${frontMatter.title} - Minecraft Teleport Plugin` : 'Minecraft Teleport Plugin';
     const description = frontMatter.description || 'A Minecraft plugin';
 
@@ -22,19 +25,17 @@ const config: DocsThemeConfig = {
       },
     };
   },
-  head: () => {
-    return (
-      <>
-        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
-        <link rel="manifest" href="/favicons/site.webmanifest" />
-        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#2d89ef" />
-        <meta name="theme-color" content="#ffffff" />
-      </>
-    );
-  },
+  head: () => (
+    <>
+      <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
+      <link rel="manifest" href="/favicons/site.webmanifest" />
+      <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="msapplication-TileColor" content="#2d89ef" />
+      <meta name="theme-color" content="#ffffff" />
+    </>
+  ),
   logo: <span>Minecraft Teleport Plugin</span>,
   project: {
     link: 'https://github.com/r4ai/MinecraftTeleportPlugin',

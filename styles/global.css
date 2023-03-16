@@ -32,7 +32,7 @@
   thanks https://css-tricks.com/responsive-iframes/
 */
 .yt-lite::after {
-  content: "";
+  content: '';
   display: block;
   padding-bottom: calc(100% / (16 / 9));
 }

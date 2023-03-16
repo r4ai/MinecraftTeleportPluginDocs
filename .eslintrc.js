@@ -5,19 +5,38 @@ module.exports = {
   },
   extends: [
     'airbnb',
-    'airbnb-typescript',
     'airbnb/hooks',
-    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+    'eslint:recommended',
     'prettier',
+    'plugin:@typescript-eslint/recommended',
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: ['*.tsx', '*.ts'],
+      extends: ['airbnb-typescript', 'plugin:@typescript-eslint/recommended-requiring-type-checking'],
+    },
+    {
+      files: ['*.mdx'],
+      extends: ['plugin:mdx/recommended'],
+      settings: {
+        'mdx/code-blocks': true,
+        // optional, if you want to disable language mapper, set it to `false`
+        // if you want to override the default language mapper inside, you can provide your own
+        'mdx/language-mapper': {},
+      },
+      rules: {
+        'react/self-closing-comp': 'off',
+        indent: 'off',
+        'import/no-unresolved': 'off',
+      },
+    },
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
+      modules: true,
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -58,7 +77,7 @@ module.exports = {
       //jsx形式のファイル拡張子をjsxもしくはtsxに限定
       'error',
       {
-        extensions: ['.jsx', '.tsx'],
+        extensions: ['.jsx', '.tsx', 'mdx'],
       },
     ],
     'react/react-in-jsx-scope': 'off', //import React from 'react'が無くてもエラーを無くす
@@ -68,6 +87,12 @@ module.exports = {
       'error',
       {
         allowAsStatement: true,
+      },
+    ],
+    'react/require-default-props': [
+      'error',
+      {
+        ignoreFunctionalComponents: true,
       },
     ],
   },
