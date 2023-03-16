@@ -54,28 +54,21 @@ export const Recipe: FC<RecipeProps> = ({ patterns, keys, result }) => {
       </div>
       <div className="border-b-3 col-start-1 row-start-2 mx-2 grid h-36 w-36 grid-cols-recipe grid-rows-recipe gap-1 place-self-center">
         {patterns.map((row) =>
-          row.split('').map((cell) => {
-            return (
-              <div
-                key={uuidv4()}
-                className={`dimentional-border ${cell === ' ' ? '' : 'tooltip'} relative aspect-square bg-craft-600`}
-                data-tip={cell === ' ' ? '' : getId(cell)}
-              >
-                {cell === ' ' ? (
-                  <div />
-                ) : (
-                  <a href={getWikiUrl(cell)}>
-                    <Image
-                      className="h-full w-full object-contain p-1"
-                      src={getImageUrl(cell)}
-                      alt={getId(cell)}
-                      fill
-                    />
-                  </a>
-                )}
-              </div>
-            );
-          }),
+          row.split('').map((cell) => (
+            <div
+              key={uuidv4()}
+              className={`dimentional-border ${cell === ' ' ? '' : 'tooltip'} relative aspect-square bg-craft-600`}
+              data-tip={cell === ' ' ? '' : getId(cell)}
+            >
+              {cell === ' ' ? (
+                <div />
+              ) : (
+                <a href={getWikiUrl(cell)}>
+                  <Image className="h-full w-full object-contain p-1" src={getImageUrl(cell)} alt={getId(cell)} fill />
+                </a>
+              )}
+            </div>
+          )),
         )}
       </div>
       <div className="col-start-2 row-start-2 place-self-center">

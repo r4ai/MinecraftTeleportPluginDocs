@@ -9,7 +9,7 @@ export const Kbd: FC<KbdProps> = ({ children }) => {
   const { resolvedTheme } = useTheme();
 
   return (
-    <kbd data-theme={resolvedTheme} className="kbd kbd-sm dark:text-gray-200 text-gray-800">
+    <kbd data-theme={resolvedTheme} className="kbd kbd-sm text-gray-800 dark:text-gray-200">
       {children}
     </kbd>
   );

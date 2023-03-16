@@ -95,12 +95,11 @@ module.exports = {
         ignoreFunctionalComponents: true,
       },
     ],
-    "react/no-unknown-property": [
+    'react/no-unknown-property': [
       2,
       {
-        "ignore": [
-          "jsx"
-        ]
-      }
+        ignore: ['jsx', 'global'],
+      },
+    ],
   },
 };

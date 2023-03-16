@@ -5,7 +5,5 @@ module.exports = {
   trailingComma: 'all', //複数行の場合は可能な限り末尾のカンマを表示
   tabWidth: 2, //タグのスペース２ デフォルトは2
   useTabs: false, //スペースをタブに代える デフォルトはfalse
-  plugins: [
-    require('prettier-plugin-tailwindcss')
-  ]
+  plugins: [require('prettier-plugin-tailwindcss')],
 };
