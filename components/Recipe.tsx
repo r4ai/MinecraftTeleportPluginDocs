@@ -3,18 +3,6 @@ import { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import ArrowIcon from '../public/icons/arrow.svg';
 
-// type ItemType = {
-//   'Mod name': 'Minecraft';
-//   'Registry name': string;
-//   'Item ID': number;
-//   'Display name': string;
-// };
-// type ItemsType = ItemType[];
-// const items = JSON.parse('../data/items.json') as ItemsType;
-// const blocks = JSON.parse('../data/blocks.json') as ItemsType;
-// type ItemIds = (typeof items)[number]['Registry name'];
-// type BlockIds = (typeof blocks)[number]['Registry name'];
-
 type RecipeProps = {
   patterns: string[];
   keys: {
